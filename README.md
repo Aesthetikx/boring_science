@@ -1,5 +1,5 @@
-# BoringScience
-Short description and motivation.
+# Boring Science
+A mountable Rails blogging engine.
 
 ## Usage
 How to use my plugin.

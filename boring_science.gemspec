@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version     = BoringScience::VERSION
   spec.authors     = ["John DeSilva"]
   spec.email       = ["desilvjo@umich.edu"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of BoringScience."
-  spec.description = "TODO: Description of BoringScience."
+  spec.homepage    = "https://www.github.com/aesthetikx/boring_science"
+  spec.summary     = "A mountable Rails blogging engine"
+  spec.description = "A mountable Rails blogging engine"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
