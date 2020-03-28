@@ -1,4 +1,4 @@
-require "boring_science/engine"
+require 'boring_science/engine'
 
 module BoringScience
   # Your code goes here...
