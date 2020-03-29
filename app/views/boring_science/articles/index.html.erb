@@ -1,5 +1,7 @@
 <h1><%= @blog.title %></h1>
 
 <% @articles.each do |article| %>
-  <h2><%= article.title %></h2>
+  <%= link_to article_path(article) do %>
+    <h2><%= article.title %></h2>
+  <% end %>
 <% end %>

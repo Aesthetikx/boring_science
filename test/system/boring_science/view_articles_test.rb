@@ -10,13 +10,15 @@ class ViewArticlesTest < ApplicationSystemTestCase
     article = BoringScience::Article.first
 
     # Article Title
-    assert_text article.title
+    assert_selector 'a', text: article.title
   end
 
   test 'visiting an article' do
     article = BoringScience::Article.first
 
-    visit "/blog/articles/#{article.id}"
+    visit '/blog'
+
+    click_on article.title
 
     # Article Title
     assert_text article.title
