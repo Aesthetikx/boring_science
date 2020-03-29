@@ -1,4 +1,5 @@
 require 'kramdown'
+require 'turbolinks'
 
 module BoringScience
   class Engine < ::Rails::Engine
