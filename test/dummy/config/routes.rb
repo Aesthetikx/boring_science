@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount BoringScience::Engine => "/boring_science"
+  mount BoringScience::Engine => '/blog'
 end
