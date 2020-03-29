@@ -1,5 +1,6 @@
 one:
   title: Employee Handbook
+  slug: employee-handbook
   publication_date: 2000-01-01
   body:
     No employee may, in part or in whole, commit the Krabby Patty secret
@@ -8,6 +9,7 @@ one:
 
 two:
   title: Build Your Own Telescope
+  slug: build-your-own-telescope
   publication_date: 2000-01-01
   body:
     According to page 472, section C-17 of the Telescope Assembly Manual, it
@@ -16,6 +18,7 @@ two:
 
 three:
   title:  How to Become a Fancy Waiter in Less than 20 Minutes
+  slug: how-to-become-a-fancy-waiter-in-less-than-20-minutes
   body:
     Judging by the width of the book, it should take much longer than 20
     minutes to read this entire manual.

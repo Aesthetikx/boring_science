@@ -17,7 +17,7 @@ module BoringScience
       @article = articles.build(article_params)
 
       if @article.save
-        redirect_to article_path(@article.id)
+        redirect_to article_path(@article)
       else
         flash.now[:error] = @article.errors.full_messages
         render :new, status: :unprocessable_entity
@@ -30,7 +30,7 @@ module BoringScience
 
     def update
       if @article.update(article_params)
-        redirect_to article_path(@article.id)
+        redirect_to article_path(@article)
       else
         flash.now[:error] = @article.errors.full_messages
         render :edit, status: :unprocessable_entity
@@ -58,7 +58,7 @@ module BoringScience
     end
 
     def set_article
-      @article = articles.find(params[:id])
+      @article = articles.find_by!(slug: params[:slug])
     end
 
     def article_params

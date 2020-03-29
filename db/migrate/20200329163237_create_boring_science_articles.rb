@@ -4,6 +4,9 @@ class CreateBoringScienceArticles < ActiveRecord::Migration[6.0]
       t.string :title, null: false
       t.text :body, null: false
       t.date :publication_date
+      t.string :slug, null: false
+
+      t.index :slug, unique: true
 
       t.timestamps
     end

@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2020_03_29_163237) do
     t.string "title", null: false
     t.text "body", null: false
     t.date "publication_date"
+    t.string "slug", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_boring_science_articles_on_slug", unique: true
   end
 
 end

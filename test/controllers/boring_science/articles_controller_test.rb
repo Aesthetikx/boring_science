@@ -11,7 +11,7 @@ module BoringScience
 
     test 'should get show' do
       article = BoringScience::Article.first!
-      get article_url(article.id)
+      get article_url(article)
       assert_response :success
     end
 
@@ -23,7 +23,7 @@ module BoringScience
     test 'should post create successful' do
       post articles_url, params: { article: { title: 'Title', body: 'Body' } }
       article = BoringScience::Article.last!
-      assert_redirected_to article_url(article.id)
+      assert_redirected_to article_url(article)
     end
 
     test 'should post create failure' do
@@ -42,7 +42,7 @@ module BoringScience
       patch article_url(article), params: {
         article: { title: 'New Title', body: 'New Body' }
       }
-      assert_redirected_to article_url(article.id)
+      assert_redirected_to article_url(article.reload)
     end
 
     test 'should delete destroy' do
