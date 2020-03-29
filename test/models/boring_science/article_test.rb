@@ -21,5 +21,19 @@ module BoringScience
       assert_not @article.valid?
       assert_not_nil @article.errors[:title]
     end
+
+    test 'no publication date' do
+      assert_not @article.published?
+    end
+
+    test 'future publication date' do
+      @article.publication_date = 3.days.from_now
+      assert_not @article.published?
+    end
+
+    test 'past publication date' do
+      @article.publication_date = 3.days.ago
+      assert @article.published?
+    end
   end
 end

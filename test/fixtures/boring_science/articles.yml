@@ -1,5 +1,6 @@
 one:
   title: Employee Handbook
+  publication_date: 2000-01-01
   body:
     No employee may, in part or in whole, commit the Krabby Patty secret
     formula to any recorded, written, or visual form, including memories,
@@ -7,7 +8,14 @@ one:
 
 two:
   title: Build Your Own Telescope
+  publication_date: 2000-01-01
   body:
     According to page 472, section C-17 of the Telescope Assembly Manual, it
     says one needs a right-angled motorized hex drill to assemble the
     telescope.
+
+three:
+  title:  How to Become a Fancy Waiter in Less than 20 Minutes
+  body:
+    Judging by the width of the book, it should take much longer than 20
+    minutes to read this entire manual.

@@ -10,7 +10,13 @@
   </h1>
 
   <span class="boring-science-date">
-    <%= @article.created_at.strftime('%B %-d, %Y') %>
+    <% unless @article.published? %>
+      (Unpublished)
+    <% end %>
+
+    <% if @article.publication_date %>
+      <%= @article.publication_date.strftime('%B %-d, %Y') %>
+    <% end %>
   </span>
 
   <div class="boring-science-body">

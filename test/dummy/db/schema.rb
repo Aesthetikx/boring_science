@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_03_29_163237) do
   create_table "boring_science_articles", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
+    t.date "publication_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

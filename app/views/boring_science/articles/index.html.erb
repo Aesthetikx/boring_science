@@ -4,6 +4,11 @@
 
 <% @articles.each do |article| %>
   <%= link_to article_path(article) do %>
-    <h3><%= article.title %></h3>
+    <h3>
+      <% unless article.published? %>
+        (Unpublished)
+      <% end %>
+      <%= article.title %>
+    </h3>
   <% end %>
 <% end %>

@@ -5,6 +5,11 @@
   </div>
 
   <div class='field'>
+    <%= f.label :publication_date, 'Publication Date' %>
+    <%= f.date_field :publication_date %>
+  </div>
+
+  <div class='field'>
     <%= f.label :body %>
     <%= f.text_area :body, required: true, rows: 16 %>
   </div>
