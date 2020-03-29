@@ -5,13 +5,21 @@ module BoringScience
     before_action :set_blog
 
     def index
-      @articles = BoringScience::Article.order(created_at: :desc)
+      @articles = articles.order(created_at: :desc)
+    end
+
+    def show
+      @article = articles.find(params[:id])
     end
 
     private
 
     def set_blog
       @blog = OpenStruct.new(title: 'Default Blog')
+    end
+
+    def articles
+      BoringScience::Article.all
     end
   end
 end

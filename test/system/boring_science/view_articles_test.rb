@@ -12,4 +12,16 @@ class ViewArticlesTest < ApplicationSystemTestCase
     # Article Title
     assert_text article.title
   end
+
+  test 'visiting an article' do
+    article = BoringScience::Article.first
+
+    visit "/blog/articles/#{article.id}"
+
+    # Article Title
+    assert_text article.title
+
+    # Article Body
+    assert_text article.body
+  end
 end

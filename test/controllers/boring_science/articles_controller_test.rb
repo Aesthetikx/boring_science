@@ -8,5 +8,11 @@ module BoringScience
       get articles_url
       assert_response :success
     end
+
+    test 'should get show' do
+      article = BoringScience::Article.first
+      get article_url(article.id)
+      assert_response :success
+    end
   end
 end
