@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
     'README.md'
   ]
 
+  spec.add_dependency 'kramdown', '~> 2'
   spec.add_dependency 'rails', '>= 5'
 
   spec.add_development_dependency 'capybara'
