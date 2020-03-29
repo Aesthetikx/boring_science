@@ -30,5 +30,19 @@ module BoringScience
       post articles_url, params: { article: { title: 'Title' } }
       assert_response :unprocessable_entity
     end
+
+    test 'should get edit' do
+      article = BoringScience::Article.last!
+      get edit_article_url(article)
+      assert_response :success
+    end
+
+    test 'should patch update' do
+      article = BoringScience::Article.last!
+      patch article_url(article), params: {
+        article: { title: 'New Title', body: 'New Body' }
+      }
+      assert_redirected_to article_url(article.id)
+    end
   end
 end
