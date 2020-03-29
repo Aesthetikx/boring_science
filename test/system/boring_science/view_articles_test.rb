@@ -5,7 +5,7 @@ class ViewArticlesTest < ApplicationSystemTestCase
     visit '/blog'
 
     # Blog Title
-    assert_selector 'h1', text: 'Blog'
+    assert_selector 'h2', text: 'Blog'
 
     article = BoringScience::Article.first
 

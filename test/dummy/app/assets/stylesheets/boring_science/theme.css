@@ -1,0 +1,17 @@
+::selection {
+  background-color: #1dc596;
+  color: white;
+}
+
+html {
+  font-family: 'Lora', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}

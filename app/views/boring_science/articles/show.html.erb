@@ -1,8 +1,19 @@
-<h2><%= @article.title %></h2>
+<div class="boring-science-actions">
+  <%= link_to 'Edit', edit_article_path(@article) %>
+  &emsp;
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Delete article?' } %>
+</div>
 
-<span class="date"><%= @article.created_at.strftime('%B %-d, %Y') %></span>
+<div class="boring-science-article">
+  <h1 class="boring-science-title">
+    <%= @article.title %>
+  </h1>
 
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Delete article?' } %>
+  <span class="boring-science-date">
+    <%= @article.created_at.strftime('%B %-d, %Y') %>
+  </span>
 
-<%= boring_markdown(@article.body).html_safe %>
+  <div class="boring-science-body">
+    <%= boring_markdown(@article.body).html_safe %>
+  </div>
+<div>

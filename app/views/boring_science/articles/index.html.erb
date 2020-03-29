@@ -1,7 +1,9 @@
-<%= link_to 'New Article', new_article_path %>
+<div class="boring-science-actions">
+  <%= link_to 'New Article', new_article_path %>
+</div>
 
 <% @articles.each do |article| %>
   <%= link_to article_path(article) do %>
-    <h2><%= article.title %></h2>
+    <h3><%= article.title %></h3>
   <% end %>
 <% end %>

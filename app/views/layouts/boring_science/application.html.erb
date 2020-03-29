@@ -12,14 +12,18 @@
     <%= javascript_include_tag 'boring_science/application' %>
   </head>
   <body>
-    <main>
+    <nav>
       <%= link_to articles_path do %>
-        <h1><%= @blog.title %></h1>
+        <h2><%= @blog.title %></h2>
       <% end %>
-
+    </nav>
+    <main>
       <%= flash[:success] %>
 
       <%= yield %>
     </main>
+    <footer>
+      Footer
+    </footer>
   </body>
 </html>
