@@ -44,5 +44,11 @@ module BoringScience
       }
       assert_redirected_to article_url(article.id)
     end
+
+    test 'should delete destroy' do
+      article = BoringScience::Article.last!
+      delete article_url(article)
+      assert_redirected_to articles_url
+    end
   end
 end

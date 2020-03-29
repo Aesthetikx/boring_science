@@ -37,6 +37,16 @@ module BoringScience
       end
     end
 
+    def destroy
+      if @article.destroy
+        flash[:success] = 'Article deleted successfully.'
+        redirect_to articles_path
+      else
+        flash.now[:error] = @article.errors.full_messages
+        render :show, status: :unprocessable_entity
+      end
+    end
+
     private
 
     def set_blog
