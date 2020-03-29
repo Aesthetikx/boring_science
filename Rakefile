@@ -29,4 +29,10 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-task default: :test
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new do |task|
+  task.requires << 'rubocop-rails'
+end
+
+task default: %i[test rubocop]
