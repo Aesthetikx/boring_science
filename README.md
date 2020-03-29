@@ -1,5 +1,8 @@
-# Boring Science
+<h1><i>Boring Science</i></h1>
+
 A mountable Rails blogging engine.
+
+<img src="https://vignette.wikia.nocookie.net/spongebob/images/8/87/The_Paper_088.png/revision/latest" width=256></img>
 
 ## Usage
 How to use my plugin.
