@@ -4,7 +4,9 @@ module BoringScience
   class ArticlesController < ApplicationController
     before_action :set_blog
 
-    def index; end
+    def index
+      @articles = BoringScience::Article.order(created_at: :desc)
+    end
 
     private
 
