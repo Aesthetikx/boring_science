@@ -10,7 +10,7 @@ class DeleteArticlesTest < ApplicationSystemTestCase
 
     assert_difference('BoringScience::Article.count', -1) do
       accept_confirm { click_on 'Delete' }
-      assert_text /successfully/i
+      assert_text(/successfully/i)
     end
   end
 end

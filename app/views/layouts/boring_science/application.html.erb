@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Boring science</title>
+    <title><%= boring_science_page_title %></title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +14,7 @@
   <body>
     <nav>
       <%= link_to articles_path do %>
-        <h2><%= @blog.title %></h2>
+        <h2><%= boring_science_blog.title %></h2>
       <% end %>
     </nav>
     <main>
