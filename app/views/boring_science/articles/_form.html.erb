@@ -10,6 +10,11 @@
   </div>
 
   <div class='field'>
+    <%= f.label :summary %>
+    <%= f.text_area :summary, rows: 2 %>
+  </div>
+
+  <div class='field'>
     <%= f.label :body %>
     <%= f.text_area :body, required: true, rows: 16 %>
   </div>

@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_30_142224) do
+ActiveRecord::Schema.define(version: 2020_03_30_144744) do
 
   create_table "boring_science_articles", force: :cascade do |t|
     t.string "blog", null: false
     t.string "title", null: false
+    t.string "summary"
     t.text "body", null: false
     t.date "publication_date"
     t.string "slug", null: false

@@ -4,6 +4,7 @@ class CreateBoringScienceArticles < ActiveRecord::Migration[6.0]
     create_table :boring_science_articles do |t|
       t.string :blog, null: false
       t.string :title, null: false
+      t.string :summary
       t.text :body, null: false
       t.date :publication_date
       t.string :slug, null: false

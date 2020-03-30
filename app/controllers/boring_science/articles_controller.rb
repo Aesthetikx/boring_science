@@ -76,7 +76,8 @@ module BoringScience
     end
 
     def article_params
-      params.require(:article).permit(:title, :body, :publication_date)
+      params.require(:article)
+            .permit(:title, :summary, :body, :publication_date)
     end
   end
 end
