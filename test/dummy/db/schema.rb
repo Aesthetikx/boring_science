@@ -18,8 +18,12 @@ ActiveRecord::Schema.define(version: 2020_03_29_163237) do
     t.text "body", null: false
     t.date "publication_date"
     t.string "slug", null: false
+    t.string "author_type"
+    t.integer "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index "\"author\"", name: "index_boring_science_articles_on_author"
+    t.index ["author_type", "author_id"], name: "index_boring_science_articles_on_author_type_and_author_id"
     t.index ["blog"], name: "index_boring_science_articles_on_blog"
     t.index ["slug"], name: "index_boring_science_articles_on_slug", unique: true
   end

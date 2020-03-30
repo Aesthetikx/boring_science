@@ -6,9 +6,11 @@ class CreateBoringScienceArticles < ActiveRecord::Migration[6.0]
       t.text :body, null: false
       t.date :publication_date
       t.string :slug, null: false
+      t.references :author, polymorphic: true
 
       t.index :blog
       t.index :slug, unique: true
+      t.index :author
 
       t.timestamps
     end

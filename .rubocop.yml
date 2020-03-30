@@ -3,6 +3,7 @@ require: rubocop-rails
 AllCops:
   Exclude:
     - 'bin/**/*'
+    - 'db/**/*'
     - 'test/**/*'
 
 Style/FrozenStringLiteralComment:

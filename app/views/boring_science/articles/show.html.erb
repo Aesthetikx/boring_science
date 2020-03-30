@@ -9,15 +9,23 @@
     <%= @article.title %>
   </h1>
 
-  <span class="boring-science-date">
-    <% unless @article.published? %>
-      (Unpublished)
-    <% end %>
+  <div class="boring-science-metadata">
+    <span class="boring-science-date">
+      <% unless @article.published? %>
+        (Unpublished)
+      <% end %>
 
-    <% if @article.publication_date %>
-      <%= @article.publication_date.strftime('%B %-d, %Y') %>
-    <% end %>
-  </span>
+      <% if @article.publication_date %>
+        <%= @article.publication_date.strftime('%B %-d, %Y') %>
+      <% end %>
+    </span>
+
+    <span class="boring-science-author">
+      <% if @article.author %>
+        <%= @article.author.name %>
+      <% end %>
+    </span>
+  </div>
 
   <div class="boring-science-body">
     <%= boring_science_markdown(@article.body).html_safe %>

@@ -128,9 +128,15 @@ input[type='submit'] {
   margin-bottom: 0;
 }
 
-.boring-science-date {
+.boring-science-metadata {
   color: #777;
-  margin-top: -1rem;
+}
+
+.boring-science-date {
+  margin-right: 1rem;
+}
+
+.boring-science-author {
 }
 
 .boring-science-body {

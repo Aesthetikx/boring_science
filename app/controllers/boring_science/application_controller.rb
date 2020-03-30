@@ -15,5 +15,9 @@ module BoringScience
     def boring_science_article
       @article if defined? @article
     end
+
+    def current_user
+      nil
+    end
   end
 end

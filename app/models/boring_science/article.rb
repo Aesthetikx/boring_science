@@ -1,5 +1,7 @@
 module BoringScience
   class Article < ApplicationRecord
+    belongs_to :author, polymorphic: true, optional: true
+
     validates :title, presence: true
     validates :body, presence: true
     validates :slug, presence: true, uniqueness: true
