@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_30_144744) do
+ActiveRecord::Schema.define(version: 2020_03_30_152530) do
 
   create_table "boring_science_articles", force: :cascade do |t|
     t.string "blog", null: false
@@ -21,9 +21,8 @@ ActiveRecord::Schema.define(version: 2020_03_30_144744) do
     t.string "slug", null: false
     t.string "author_type"
     t.integer "author_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index "\"author\"", name: "index_boring_science_articles_on_author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_boring_science_articles_on_author_type_and_author_id"
     t.index ["blog"], name: "index_boring_science_articles_on_blog"
     t.index ["slug"], name: "index_boring_science_articles_on_slug", unique: true
