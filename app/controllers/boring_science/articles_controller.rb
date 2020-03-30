@@ -50,7 +50,19 @@ module BoringScience
     private
 
     def articles
-      BoringScience::Article.where(blog: boring_science_blog.blog)
+      blog = boring_science_blog.blog
+
+      blog_articles = BoringScience::Article.where(blog: blog)
+
+      published_articles = blog_articles.published
+
+      user_articles = if boring_science_user
+                        blog_articles.where(author: boring_science_user)
+                      else
+                        blog_articles.none
+                      end
+
+      published_articles.or(user_articles)
     end
 
     def set_article

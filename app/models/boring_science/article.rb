@@ -8,6 +8,8 @@ module BoringScience
 
     before_validation :assign_slug
 
+    scope :published, -> { where('publication_date <= ?', Time.zone.today) }
+
     def to_param
       slug
     end
