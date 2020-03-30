@@ -2,6 +2,8 @@ require 'application_system_test_case'
 
 class CreateArticlesTest < ApplicationSystemTestCase
   test 'create new articles' do
+    user = User.first!
+
     visit '/blog'
 
     click_on 'New Article'
@@ -15,6 +17,7 @@ class CreateArticlesTest < ApplicationSystemTestCase
     article = BoringScience::Article.last!
     assert_equal title, article.title
     assert_equal body, article.body
+    assert_equal user, article.author
     assert article.published?
   end
 end

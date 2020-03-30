@@ -14,7 +14,7 @@ module BoringScience
 
     def create
       @article = articles.build(article_params)
-      @article.author = current_user
+      @article.author = boring_science_user
 
       if @article.save
         redirect_to article_path(@article)

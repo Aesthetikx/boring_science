@@ -1,5 +1,5 @@
 module BoringScience
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ::ApplicationController
     protect_from_forgery with: :exception
 
     helper_method :boring_science_blog, :boring_science_article
@@ -14,10 +14,6 @@ module BoringScience
 
     def boring_science_article
       @article if defined? @article
-    end
-
-    def current_user
-      nil
     end
   end
 end
