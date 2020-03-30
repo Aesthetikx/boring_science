@@ -1,6 +1,8 @@
-<div class="boring-science-actions">
-  <%= link_to 'New Article', new_article_path %>
-</div>
+<% if boring_science_user %>
+  <div class="boring-science-actions">
+    <%= link_to 'New Article', new_article_path %>
+  </div>
+<% end %>
 
 <% @articles.each do |article| %>
   <%= link_to article_path(article) do %>

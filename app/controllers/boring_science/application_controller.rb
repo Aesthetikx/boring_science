@@ -2,7 +2,9 @@ module BoringScience
   class ApplicationController < ::ApplicationController
     protect_from_forgery with: :exception
 
-    helper_method :boring_science_blog, :boring_science_article
+    helper_method :boring_science_blog,
+                  :boring_science_article,
+                  :boring_science_user
 
     private
 
