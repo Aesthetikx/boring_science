@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_29_163237) do
+ActiveRecord::Schema.define(version: 2020_03_30_142224) do
 
   create_table "boring_science_articles", force: :cascade do |t|
     t.string "blog", null: false
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 2020_03_29_163237) do
     t.index ["author_type", "author_id"], name: "index_boring_science_articles_on_author_type_and_author_id"
     t.index ["blog"], name: "index_boring_science_articles_on_blog"
     t.index ["slug"], name: "index_boring_science_articles_on_slug", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
