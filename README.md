@@ -24,7 +24,7 @@ $ rails db:migrate
 
 ## Usage
 Add a blog to your applications routes:
-```
+```ruby
 # config/routes.rb
 Rails.application.routes.draw do
 
@@ -41,7 +41,7 @@ end
 ```
 
 Define a blogging user (can be nil for read only access):
-```
+```ruby
 # app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
 
