@@ -7,7 +7,9 @@ module BoringScience
     private
 
     def boring_science_blog
-      OpenStruct.new(title: 'Default Blog')
+      defaults = { title: 'Blog', blog: 'default' }
+      attributes = params.to_unsafe_h.fetch(:options, {})
+      OpenStruct.new(defaults.merge(attributes))
     end
 
     def boring_science_article

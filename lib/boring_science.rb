@@ -1,5 +1,7 @@
 require 'boring_science/engine'
 
 module BoringScience
-  # Your code goes here...
+  def self.blog
+    BoringScience::Engine
+  end
 end

@@ -49,7 +49,7 @@ module BoringScience
     private
 
     def articles
-      BoringScience::Article.all
+      BoringScience::Article.where(blog: boring_science_blog.blog)
     end
 
     def set_article

@@ -2,7 +2,7 @@ require 'application_system_test_case'
 
 class EditArticlesTest < ApplicationSystemTestCase
   test 'editing articles' do
-    article = BoringScience::Article.last!
+    article = BoringScience::Article.where(blog: 'default').last!
 
     visit '/blog'
 

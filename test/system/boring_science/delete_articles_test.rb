@@ -2,7 +2,7 @@ require 'application_system_test_case'
 
 class DeleteArticlesTest < ApplicationSystemTestCase
   test 'deleting articles' do
-    article = BoringScience::Article.last!
+    article = BoringScience::Article.where(blog: 'default').last!
 
     visit '/blog'
 

@@ -7,14 +7,14 @@ class ViewArticlesTest < ApplicationSystemTestCase
     # Blog Title
     assert_selector 'h2', text: 'Blog'
 
-    article = BoringScience::Article.first
+    article = BoringScience::Article.where(blog: 'default').first!
 
     # Article Title
     assert_selector 'a', text: article.title
   end
 
   test 'visiting an article' do
-    article = BoringScience::Article.first
+    article = BoringScience::Article.where(blog: 'default').first!
 
     visit '/blog'
 

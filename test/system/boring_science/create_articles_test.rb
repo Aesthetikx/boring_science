@@ -12,7 +12,7 @@ class CreateArticlesTest < ApplicationSystemTestCase
 
     click_on 'Create'
 
-    article = BoringScience::Article.last
+    article = BoringScience::Article.last!
     assert_equal title, article.title
     assert_equal body, article.body
     assert article.published?
