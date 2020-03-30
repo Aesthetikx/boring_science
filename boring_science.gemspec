@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rails', '>= 5'
   spec.add_dependency 'turbolinks', '~> 5'
 
+  spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'capybara'
   spec.add_development_dependency 'puma'
   spec.add_development_dependency 'rubocop-rails'
