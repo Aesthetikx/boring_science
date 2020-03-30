@@ -3,6 +3,7 @@ require_dependency 'boring_science/application_controller'
 module BoringScience
   class ArticlesController < ApplicationController
     before_action :set_article, except: %i[index new create]
+    before_action :set_author, only: %i[new create edit update]
 
     def index
       @articles = articles.order(created_at: :desc)
@@ -14,7 +15,7 @@ module BoringScience
 
     def create
       @article = articles.build(article_params)
-      @article.author = boring_science_user
+      @article.author = @author
 
       if @article.save
         redirect_to article_path(@article)
@@ -67,6 +68,11 @@ module BoringScience
 
     def set_article
       @article = articles.find_by!(slug: params[:slug])
+    end
+
+    def set_author
+      @author = boring_science_user
+      raise ActiveRecord::RecordNotFound unless @author
     end
 
     def article_params
