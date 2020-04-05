@@ -133,9 +133,8 @@ input[type='submit'] {
   line-height: 1.3em;
 }
 
-.boring-science-date {
+.boring-science-article .boring-science-date {
   font-size: .8em;
-  margin-right: 1rem;
 }
 
 .boring-science-author {
@@ -153,4 +152,20 @@ input[type='submit'] {
 
 .boring-science-body a {
   color: #28F;
+}
+
+.boring-science-entry {
+  border-radius: 3px;
+  border: 1px solid #00000010;
+  box-shadow: 0 1px 4px #00000020;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+
+.boring-science-entry .boring-science-metadata {
+  font-size: .8em;
+}
+
+.boring-science-entry .boring-science-summary {
+  color: #555;
 }

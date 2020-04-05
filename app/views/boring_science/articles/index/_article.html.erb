@@ -1,11 +1,24 @@
-<%= link_to article_path(article) do %>
-  <h3>
-    <% unless article.published? %>
-      (Unpublished)
+<div class="boring-science-entry">
+  <div class="boring-science-metadata">
+    <% if article.author %>
+      <div class="boring-science-author">
+        <%= article.author.name %>
+      </div>
     <% end %>
-    <%= article.title %>
-  </h3>
-  <span class="boring-science-summary">
-    <%= article.summary %>
-  </span>
-<% end %>
+    <div class="boring-science-date">
+      <%= boring_science_article_date(article) %>
+    </div>
+  </div>
+  <%= link_to article_path(article) do %>
+    <div>
+      <h2>
+        <%= article.title %>
+      </h2>
+      <% if article.summary.present? %>
+        <span class="boring-science-summary">
+          <%= article.summary %>
+        </span>
+      <% end %>
+    </div>
+  <% end %>
+</div>
