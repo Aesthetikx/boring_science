@@ -41,7 +41,7 @@ body {
 }
 
 body {
-  max-width: 760px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -135,7 +135,12 @@ input[type='submit'] {
 
 .boring-science-metadata {
   color: #777;
+  font-size: 1rem;
   line-height: 1.3em;
+}
+
+.boring-science-article {
+  font-size: 19px;
 }
 
 .boring-science-article .boring-science-date {
@@ -153,6 +158,14 @@ input[type='submit'] {
 
 .boring-science-body p {
   margin: 2em 0;
+}
+
+.boring-science-body h1,
+.boring-science-body h2,
+.boring-science-body h3,
+.boring-science-body h4,
+.boring-science-body h5 {
+  margin-top: 4em;
 }
 
 .boring-science-body a {
