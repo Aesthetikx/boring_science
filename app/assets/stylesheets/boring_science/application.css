@@ -147,3 +147,7 @@ input[type='submit'] {
 .boring-science-body p {
   margin: 2em 0;
 }
+
+.boring-science-body a {
+  color: #28F;
+}
