@@ -130,18 +130,21 @@ input[type='submit'] {
 
 .boring-science-metadata {
   color: #777;
+  line-height: 1.3em;
 }
 
 .boring-science-date {
+  font-size: .8em;
   margin-right: 1rem;
 }
 
 .boring-science-author {
+  color: #444;
 }
 
 .boring-science-body {
-  padding: 1rem 0;
   line-height: 1.7em;
+  padding: 1rem 0;
 }
 
 .boring-science-body p {
