@@ -82,6 +82,11 @@ main {
   flex: 1 0 auto;
 }
 
+footer {
+  color: #aaa;
+  font-size: .8em;
+}
+
 form {
   display: flex;
   flex-direction: column;
