@@ -1,0 +1,17 @@
+<div class="boring-science-metadata">
+  <% if article.author %>
+    <div class="boring-science-author">
+      <%= article.author.name %>
+    </div>
+  <% end %>
+
+  <div class="boring-science-date">
+    <% if article.publication_date %>
+      <%= article.publication_date.strftime('%B %-d, %Y') %>
+    <% end %>
+
+    <% unless article.published? %>
+      (Unpublished)
+    <% end %>
+  </div>
+</div>

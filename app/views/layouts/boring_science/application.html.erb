@@ -1,30 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= boring_science_page_title %></title>
-
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-
-    <%= stylesheet_link_tag 'boring_science/application', media: 'all' %>
-    <%= javascript_include_tag 'boring_science/application' %>
-  </head>
-  <body>
-    <nav>
-      <%= link_to articles_path do %>
-        <h2><%= boring_science_blog.title %></h2>
-      <% end %>
-    </nav>
-    <main>
-      <%= flash[:success] %>
-      <%= flash[:error] %>
-
-      <%= yield %>
-    </main>
-    <footer>
-      Footer
-    </footer>
-  </body>
+  <%= render partial: 'layouts/boring_science/head' %>
+  <%= render partial: 'layouts/boring_science/body' %>
 </html>
