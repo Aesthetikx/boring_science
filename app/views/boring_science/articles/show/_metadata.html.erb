@@ -6,12 +6,6 @@
   <% end %>
 
   <div class="boring-science-date">
-    <% if article.publication_date %>
-      <%= article.publication_date.strftime('%B %-d, %Y') %>
-    <% end %>
-
-    <% unless article.published? %>
-      (Unpublished)
-    <% end %>
+    <%= boring_science_article_date(article) %>
   </div>
 </div>
