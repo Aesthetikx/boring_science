@@ -10,9 +10,7 @@ module BoringScience
     end
 
     def boring_science_article_date(article)
-      str = ''
-
-      str += article.publication_date&.strftime('%B %-d, %Y')
+      str = article.publication_date&.strftime('%B %-d, %Y') || ''
 
       str += ' (Unpublished)' unless article.published?
 
